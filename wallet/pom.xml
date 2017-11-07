@@ -54,7 +54,7 @@
 			<groupId>com.google</groupId>
 			<artifactId>feathercoinj</artifactId>
 
-			<version>0.98-SNAPSHOT</version>
+			<version>0.97-SNAPSHOT</version>
 
 		</dependency>
 
@@ -86,6 +86,12 @@
 			<version>1.6.2</version>
 		</dependency>
 
+<dependency>
+      <groupId>org.sonatype.aether</groupId>
+      <artifactId>aether-api</artifactId>
+      <version>1.8</version>
+    </dependency>
+
 	</dependencies>
 
 	<profiles>
@@ -114,12 +120,13 @@
 			<plugin>
 				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
 				<artifactId>android-maven-plugin</artifactId>
+				<version>3.8.0</version>
 				<configuration>
 					<excludeJarResources>
 						<excludeJarResource>.*\.jar$</excludeJarResource>
 					</excludeJarResources>
 					<sdk>
-						<platform>14</platform>
+						<platform>19</platform>
 					</sdk>
 					<sign>
 						<debug>both</debug>
@@ -154,6 +161,7 @@
 			 <plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-jarsigner-plugin</artifactId>
+				<version>1.4</version>
 			    <executions>
 				<execution>
 				    <id>signing</id>
@@ -187,6 +195,7 @@
 			<plugin>
 			    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
 			    <artifactId>maven-android-plugin</artifactId>
+				<version>3.0.0-alpha-9</version>
 			    <inherited>true</inherited>
 			    <configuration>
 				<sign>
