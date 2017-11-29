@@ -70,7 +70,7 @@ public class Constants
 	public static final String PEER_DISCOVERY_IRC_CHANNEL_PROD = "#feathercoin";
 	public static final String PEER_DISCOVERY_IRC_CHANNEL_TEST = "#feathercoinTEST3";
 
-	private static final String BLOCKEXPLORER_BASE_URL_PROD = "http://cryptocoinexplorer.com:5750/chain/Feathercoin";
+	private static final String BLOCKEXPLORER_BASE_URL_PROD = "http://explorer.feathercoin.com/chain/Feathercoin";
 	private static final String BLOCKEXPLORER_BASE_URL_TEST = "http://cryptocoinexplorer.com:5750/chain/Feathercoin";
 	public static final String BLOCKEXPLORER_BASE_URL = TEST ? BLOCKEXPLORER_BASE_URL_TEST : BLOCKEXPLORER_BASE_URL_PROD;
 
@@ -126,7 +126,7 @@ public class Constants
 	public static final String PREFS_KEY_CONNECTIVITY_NOTIFICATION = "connectivity_notification";
 	public static final String PREFS_KEY_SELECTED_ADDRESS = "selected_address";
 	public static final String PREFS_KEY_EXCHANGE_CURRENCY = "exchange_currency";
-	public static final String PREFS_KEY_TRUSTED_PEER = "trusted_peer";
+	public static final String PREFS_KEY_TRUSTED_PEER = "dnsseed.feathercoin.com"; //"trusted_peer";
 	public static final String PREFS_KEY_TRUSTED_PEER_ONLY = "trusted_peer_only";
 	public static final String PREFS_KEY_LABS_SEND_COINS_LOW_FEE = "labs_send_coins_low_fee";
 	public static final String PREFS_KEY_LABS_TRANSACTION_DETAILS = "labs_transactions_details";
