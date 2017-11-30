@@ -61,6 +61,7 @@ import com.google.feathercoin.core.Wallet.BalanceType;
 import com.google.feathercoin.discovery.DnsDiscovery;
 import com.google.feathercoin.discovery.IrcDiscovery;
 import com.google.feathercoin.discovery.PeerDiscovery;
+import com.google.feathercoin.discovery.SeedPeers;
 import com.google.feathercoin.discovery.PeerDiscoveryException;
 import com.google.feathercoin.store.BlockStore;
 import com.google.feathercoin.store.BlockStoreException;
@@ -390,7 +391,10 @@ public class BlockchainServiceImpl extends android.app.Service implements Blockc
 				{
 					private final PeerDiscovery normalPeerDiscovery = Constants.TEST ? new IrcDiscovery(Constants.PEER_DISCOVERY_IRC_CHANNEL_TEST)
 							: new DnsDiscovery(Constants.NETWORK_PARAMETERS);
-
+							
+                    private final PeerDiscovery SeedPeerDiscovery = Constants.TEST ? new IrcDiscovery(Constants.PEER_DISCOVERY_IRC_CHANNEL_TEST)
+							: new SeedPeers(Constants.NETWORK_PARAMETERS);
+							
 					public InetSocketAddress[] getPeers(final long timeoutValue, final TimeUnit timeoutUnit) throws PeerDiscoveryException
 					{
 						final List<InetSocketAddress> peers = new LinkedList<InetSocketAddress>();
@@ -407,12 +411,13 @@ public class BlockchainServiceImpl extends android.app.Service implements Blockc
 							}
 						}
 
-						if (!connectTrustedPeerOnly)
+						if (!connectTrustedPeerOnly) {
 							peers.addAll(Arrays.asList(normalPeerDiscovery.getPeers(timeoutValue, timeoutUnit)));
-
+                            peers.addAll(Arrays.asList(SeedPeerDiscovery.getPeers(timeoutValue, timeoutUnit)));
+                            }
 						// workaround because PeerGroup will shuffle peers
 						if (needsTrimPeersWorkaround)
-							while (peers.size() >= maxConnectedPeers)
+							while (peers.size() >= 2*:xmaxConnectedPeers)
 								peers.remove(peers.size() - 1);
 
 						return peers.toArray(new InetSocketAddress[0]);
