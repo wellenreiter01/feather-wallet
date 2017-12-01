@@ -6,8 +6,8 @@ index c7a62bf..083a321 100644
  			<groupId>com.google</groupId>
  			<artifactId>feathercoinj</artifactId>
  
--			<version>0.98-SNAPSHOT</version>
-+			<version>0.97-SNAPSHOT</version>
+-			<version>0.99</version>
++			<version>0.97</version>
  
  		</dependency>
  
@@ -80,8 +80,8 @@ index 42fbde4..090a3e7 100644
      <orderEntry type="library" scope="PROVIDED" name="Maven: org.json:json:20080701" level="project" />
      <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.android:annotations:4.1.1.4" level="project" />
      <orderEntry type="library" name="Maven: com.google.android:support-v4:r7" level="project" />
--    <orderEntry type="library" name="Maven: com.google:feathercoinj:0.98-SNAPSHOT" level="project" />
-+    <orderEntry type="library" name="Maven: com.google:feathercoinj:0.97-SNAPSHOT" level="project" />
+-    <orderEntry type="library" name="Maven: com.google:feathercoinj:0.99" level="project" />
++    <orderEntry type="library" name="Maven: com.google:feathercoinj:0.97" level="project" />
      <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.2" level="project" />
      <orderEntry type="library" name="Maven: io.netty:netty:3.6.3.Final" level="project" />
      <orderEntry type="library" name="Maven: com.madgag:sc-light-jdk15on:1.47.0.2" level="project" />

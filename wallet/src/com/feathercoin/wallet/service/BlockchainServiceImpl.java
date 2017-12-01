@@ -413,11 +413,14 @@ public class BlockchainServiceImpl extends android.app.Service implements Blockc
 
 						if (!connectTrustedPeerOnly) {
 							peers.addAll(Arrays.asList(normalPeerDiscovery.getPeers(timeoutValue, timeoutUnit)));
-                            peers.addAll(Arrays.asList(SeedPeerDiscovery.getPeers(timeoutValue, timeoutUnit)));
+							if(peers.size() < 7) 
+							{
+                               peers.addAll(Arrays.asList(SeedPeerDiscovery.getPeers(timeoutValue,timeoutUnit)));
                             }
+                        }
 						// workaround because PeerGroup will shuffle peers
 						if (needsTrimPeersWorkaround)
-							while (peers.size() >= 2*:xmaxConnectedPeers)
+							while (peers.size() >= maxConnectedPeers)
 								peers.remove(peers.size() - 1);
 
 						return peers.toArray(new InetSocketAddress[0]);
@@ -426,6 +429,7 @@ public class BlockchainServiceImpl extends android.app.Service implements Blockc
 					public void shutdown()
 					{
 						normalPeerDiscovery.shutdown();
+						SeedPeerDiscovery.shutdown();
 					}
 				});
 
