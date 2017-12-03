@@ -413,7 +413,7 @@ public class BlockchainServiceImpl extends android.app.Service implements Blockc
 
 						if (!connectTrustedPeerOnly) {
 							peers.addAll(Arrays.asList(normalPeerDiscovery.getPeers(timeoutValue, timeoutUnit)));
-							while(peers.size() < maxConnectedPeers) 
+							while(peers.size() < maxConnectedPeers-1) 
 							{
                                peers.addAll(Arrays.asList(SeedPeerDiscovery.getPeers(timeoutValue,timeoutUnit)));
                             }
