@@ -139,7 +139,7 @@
 						<platform>19</platform>
 					</sdk>
 					<sign>
-						<debug>both</debug>
+						<debug>false</debug>
 					</sign>
 				</configuration>
 			</plugin>

@@ -4,7 +4,7 @@
 	package="com.feathercoin.wallet"
 	android:installLocation="auto"
 
-	android:versionCode="30005"
+	android:versionCode="30007"
 	android:versionName="3.05" >
 	<!--android:installLocation="preferExternal"-->
 	<!-- Change to auto to install on emulator -->
