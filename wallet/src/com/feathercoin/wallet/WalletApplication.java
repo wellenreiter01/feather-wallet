@@ -109,7 +109,7 @@ public class WalletApplication extends Application
 
 		backupKeys();
 
-		wallet.autosaveToFile(walletFile, 1, TimeUnit.SECONDS, new WalletAutosaveEventListener());
+		wallet.autosaveToFile(walletFile, 2, TimeUnit.SECONDS, new WalletAutosaveEventListener());
 	}
 
 	private static final class WalletAutosaveEventListener implements AutosaveEventListener
