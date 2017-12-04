@@ -105,7 +105,7 @@ public class Constants
 	public static final String LICENSE_URL = "http://www.gnu.org/licenses/gpl-3.0.txt";
 	public static final String SOURCE_URL = "https://github.com/wellenreiter01/feathercoin-wallet-2";
 	public static final String BINARY_URL = "https://github.com/wellenreiter01/feathercoin-wallet-2";
-	public static final String CREDITS_FEATHERCOINJ_URL = "http://code.google.com/p/feathercoinj/";
+	public static final String CREDITS_FEATHERCOINJ_URL = "https://github.com/wellenreiter01/feathercoinj";
 	public static final String CREDITS_ZXING_URL = "http://code.google.com/p/zxing/";
 	public static final String CREDITS_ICON_URL = "https://bitcointalk.org/index.php?topic=181443.msg1928890#msg1928890";
 	public static final String AUTHOR_TWITTER_URL = "https://twitter.com/Feathercoin";

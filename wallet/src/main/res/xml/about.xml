@@ -6,7 +6,7 @@
 			android:key="about_version"
 			android:title="Version" />
 		<Preference
-			android:summary="© 2011-2013, Erik Gregg"
+			android:summary="© 2011-2013, Erik Gregg\n© 2014-2017 Feathercoin-Application-Team"
 			android:title="Copyright" />
 		<Preference
 			android:key="about_license"
@@ -23,12 +23,8 @@
 			android:title="@string/about_credits_icon_title" />
 		<Preference
 			android:key="about_author_twitter"
-			android:summary="\@feathercoin_wallet"
+			android:summary="\@feathercoin"
 			android:title="@string/about_author_twitter_title" />
-		<Preference
-			android:key="about_author_googleplus"
-			android:summary="+Erik Gregg"
-			android:title="@string/about_author_googleplus_title" />
 		<Preference
 			android:key="about_market_app"
 			android:title="@string/about_credits_market_app_title" />
