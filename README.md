@@ -1,5 +1,8 @@
 Welcome to _Feathercoin Wallet_, a standalone Feathercoin payment app for your Android device!
 
+*_The Android Wallet is not maintained anymore. See  http://forum.feathercoin.com/topic/9913/feathercoin-wallet-2-for-android-is-obsolete_*
+
+
 This project contains several sub-projects:
 
  * __wallet__:
